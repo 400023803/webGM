@@ -13,10 +13,12 @@ They are re-packed into a custom `.wpck` file format I made - it just stores a f
 (I use this format instead of `.zip` because I don't need external libraries for it).
 
 ### How to add games:
-1. In the `/games/dumps` folder, create a new folder with the name of the game.
+1. Buy the game.
+    - webGM is intended for PC games on Steam. It probably works elsewhere, but that hasn't been tested.
+2. In the `/games/dumps` folder, create a new folder with the name of the game.
     - Inside this folder, create the folders `fonts`, `info`, `objects`, `rooms`, `scripts`, `sounds`, and `sprites`.
     - Also create the folder `music` inside the `sounds` folder.
-2. Download [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool). I'm not associated with it, but it's a good tool.
+3. Download [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool). I'm not associated with it, but it's a good tool.
     - Open the game's `data.win` file in UndertaleModTool.
     - Run these scripts in UTMT (in the "*Resource Unpackers*" category): `ExportFontData`, `ExportAllCode`, `ExportAllSounds`, and `ExportAllSprites`.
         - `ExportFontData`: Click "*Select All*". Copy the contents of the export folder to the `fonts` folder.
@@ -28,15 +30,15 @@ They are re-packed into a custom `.wpck` file format I made - it just stores a f
         - `ExportAllObjects`: Select the `objects` folder.
         - `ExportAllRooms`: Select the `rooms` folder.
         - `ExportSpriteInfo`: Select the `sprites` folder.
-3. Pack the game dump into a `.wpck` file.
+4. Pack the game dump into a `.wpck` file.
     - Open webGM
     - Select the option `[builtin util] Pack game dump`.
         - Select the main game dump folder.
         - Export the `.wpck` file to `/games`.
-4. Reload webGM, and select the name of the game.
+5. Reload webGM, and select the name of the game.
     - If you don't see the name of the game, try closing and reopening webGM.
     - If you still don't see it, make sure you followed the steps correctly.
-5. The game should launch in a new window.
+6. The game should launch in a new window.
     - If the game doesn't open when you click on it, check your popup blocker settings.
     - If it still doesn't open, make sure you followed the steps correctly.
 
