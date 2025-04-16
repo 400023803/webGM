@@ -1,0 +1,14 @@
+<!doctype html>
+<title>webOS - WPCK builder</title>
+<link rel="stylesheet" href="./style.css">
+
+<button id="selectFolderBtn" autofocus>Select folder</button>
+<button id="downloadBtn" disabled>Download</button>
+
+<script src="./filebuf.js"></script>
+<script src="./libwpck.js"></script>
+<script src="./filesys.js"></script>
+<script src="./buildlib.js"></script>
+<script>
+    selectFolderBtn.onclick = ev => buildWithFilesystem(ev.shiftKey)
+</script>
