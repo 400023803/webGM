@@ -20,7 +20,7 @@ They are re-packed into a custom `.wpck` file format I made - it just stores a f
     - Also create the folder `music` inside the `sounds` folder.
 3. Download [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool). I'm not associated with it, but it's a good tool.
     - Open the game's `data.win` file in UndertaleModTool.
-    - Run these scripts in UTMT (in the "*Resource Unpackers*" category): `ExportFontData`, `ExportAllCode`, `ExportAllSounds`, and `ExportAllSprites`.
+    - Run these scripts in UTMT (in the "*Resource Unpackers*" category): `ExportFontData`, `ExportAllCode`, `ExportAllSounds`, and `ExportAllSprites`. Then delete the leftover export folders that you copied files from.
         - `ExportFontData`: Click "*Select All*". Copy the contents of the export folder to the `fonts` folder.
         - `ExportAllCode`: Copy the contents of the export folder to the `scripts` folder.
         - `ExportAllSounds`: Click "*Yes*" to export both types of sounds. Copy the contents of the "*Exported Sounds*" folder to the `sounds` folder, and copy the contents of the "*External Sounds*" folder to the `sounds/music` folder.
