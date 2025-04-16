@@ -24,7 +24,7 @@ They are re-packed into a custom `.wpck` file format I made - it just stores a f
         - `ExportFontData`: Click "*Select All*". Copy the contents of the export folder to the `fonts` folder.
         - `ExportAllCode`: Copy the contents of the export folder to the `scripts` folder.
         - `ExportAllSounds`: Click "*Yes*" to export both types of sounds. Copy the contents of the "*Exported Sounds*" folder to the `sounds` folder, and copy the contents of the "*External Sounds*" folder to the `sounds/music` folder.
-        - `ExportAllSprites`: Click "*Yes*". Click "*Yes*" again to export the sprites into their own folders. Copy the contents of the export folder to the `sprites` folder.
+        - `ExportAllSprites`: Click "*Yes*" to keep the padding on the sprites. Click "*Yes*" again to export the sprites into their own folders. Copy the contents of the export folder to the `sprites` folder.
     - Run these scripts in UTMT (in the `/utmt-scripts/` folder here - select "*Run other script...*" in UTMT): `ExportGameInfo`, `ExportAllObjects`, `ExportAllRooms`, and `ExportSpriteInfo`.
         - `ExportGameInfo`: Select the `info` folder.
         - `ExportAllObjects`: Select the `objects` folder.
