@@ -3,6 +3,9 @@ webGM is a web-based GameMaker game interpreter.
 It is currently being developed for Undertale, but should support other games.
 Please note it is still being developed, so games will probably crash/freeze somewhere.
 
+\
+*Also, the file `TODO.yaml` contains the features I'm likely to work on next, or bugs I need to fix at some point. It's not needed at all to run webGM.*
+
 ## Usage
 Use Up/Down/Enter to navigate menus (like the game select menu).
 If a game doesn't open in a new window when you select it, then check your popup blocker settings.
