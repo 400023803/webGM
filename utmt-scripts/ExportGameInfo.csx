@@ -24,12 +24,12 @@ EnsureDataLoaded();
 
 UndertaleModTool.MainWindow mainWindow = Application.Current.MainWindow as UndertaleModTool.MainWindow;
 
-string exportedObjectsFolder = PromptChooseDirectory("Choose an export folder");
-if (exportedObjectsFolder == null)
+string exportedInfoFolder = PromptChooseDirectory("Choose an export folder");
+if (exportedInfoFolder == null)
     throw new ScriptException("The export folder was not set, stopping script.");
 
 
-using (var file = new FileStream(exportedObjectsFolder + System.IO.Path.DirectorySeparatorChar + "info.csv", FileMode.Create)) {
+using (var file = new FileStream(exportedInfoFolder + System.IO.Path.DirectorySeparatorChar + "info.csv", FileMode.Create)) {
     try {
         byte[] writeData = {};
         file.Write(writeData, 0, writeData.Length);
@@ -61,7 +61,7 @@ async Task DumpInfos() {
 }
 
 void DumpInfo(string width, string height) {
-    using (var file = new FileStream(exportedObjectsFolder + System.IO.Path.DirectorySeparatorChar + "info.csv", FileMode.Append)) {
+    using (var file = new FileStream(exportedInfoFolder + System.IO.Path.DirectorySeparatorChar + "info.csv", FileMode.Append)) {
         try {
             string data = $"{width};{height}\n";
             byte[] writeData = new UTF8Encoding(true).GetBytes(data);
