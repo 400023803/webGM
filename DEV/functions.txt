@@ -1,0 +1,240 @@
+    script_execute
+string
+    random
+    round
+    instance_exists
+    instance_create
+    floor
+    ini_write_real
+event_user
+instance_number
+    ini_read_real
+choose
+file_text_open_read
+file_text_eof
+file_text_read_string
+file_text_readln
+file_text_close
+date_current_datetime
+sprite_create_from_surface
+    audio_stop_sound
+    audio_play_sound
+audio_is_playing
+    audio_sound_pitch
+    audio_sound_gain
+audio_resume_sound
+audio_sound_get_pitch
+audio_sound_get_gain
+    audio_stop_all
+audio_pause_sound
+sin
+draw_sprite_part_ext
+draw_background_part_ext
+make_color_rgb
+draw_enable_alphablend
+draw_background
+draw_set_alpha
+    draw_set_color
+    window_get_height
+    window_get_width
+surface_create
+surface_set_target
+draw_clear_alpha
+irandom
+ceil
+draw_point_color
+surface_reset_target
+draw_surface
+surface_free
+    game_restart
+    draw_sprite
+    draw_sprite_part
+sprite_get_width
+sprite_get_height
+abs
+    min
+room_goto
+    string_char_at
+    ord
+    draw_text_transformed
+room_goto_next
+    string_length
+    draw_text
+    keyboard_check_pressed
+string_delete
+    ini_section_exists
+    string_width
+keyboard_clear
+    string_lower
+    chr
+room_get_name
+    ini_write_string
+room_set_persistent
+    randomize
+    audio_channel_num
+    steam_initialised
+    steam_file_exists
+file_text_open_write
+file_text_write_string
+    file_exists
+file_delete
+steam_file_delete
+cos
+    instance_destroy
+draw_set_colour
+    draw_set_font
+merge_color
+    sprite_prefetch
+    ds_map_find_value
+    is_undefined
+ds_map_delete
+    ds_map_set
+ds_map_destroy
+string_byte_length
+    string_pos
+    ds_map_create
+file_text_read_real
+    real
+ds_map_set_post
+file_text_write_real
+file_text_writeln
+    draw_rectangle
+    game_end
+    ini_close
+    ini_open
+ini_open_from_string
+buffer_async_group_begin
+buffer_async_group_option
+buffer_create
+buffer_load_async
+buffer_async_group_end
+json_encode
+buffer_write
+buffer_get_size
+buffer_save_async
+background_get_height
+background_get_width
+draw_background_stretched
+    keyboard_check
+gamepad_button_check
+joystick_check_button
+    draw_sprite_ext
+    string_height
+    string_replace_all
+    string_copy
+    ds_map_add
+    surface_get_width
+    variable_global_exists
+draw_set_circle_precision
+lengthdir_y
+lengthdir_x
+    draw_circle
+    ini_read_string
+room_goto_previous
+    action_move_to
+    action_kill_object
+joystick_has_pov
+    draw_set_halign
+    joystick_buttons
+    draw_text_transformed_color
+tile_layer_hide
+make_color_hsv
+move_towards_point
+tile_layer_shift
+    window_set_caption
+distance_to_point
+action_create_object
+action_set_alarm
+draw_getpixel
+sprite_get_name
+draw_rectangle_color
+draw_line_width
+power
+action_set_gravity
+action_set_hspeed
+action_move
+instance_find
+action_set_friction
+path_start
+path_end
+draw_self
+sprite_delete
+degtorad
+collision_line
+collision_rectangle
+point_direction
+draw_line
+room_restart
+point_distance
+move_snap
+extension_stubfunc_real
+get_string_async
+draw_text_ext
+draw_triangle
+file_rename
+    window_set_fullscreen
+window_center
+window_get_x
+window_get_y
+window_set_position
+steam_file_write_file
+    keyboard_check_direct
+string_repeat
+draw_triangle_color
+draw_line_width_color
+collision_circle
+action_set_relative
+instance_position
+action_move_point
+action_set_motion
+    event_inherited
+instance_change
+event_perform
+room_next
+room_previous
+audio_sound_get_track_position
+audio_sound_set_track_position
+distance_to_object
+collision_point
+draw_sprite_stretched
+tile_layer_show
+draw_line_color
+draw_roundrect
+sprite_exists
+action_previous_room
+    os_get_language
+    os_get_region
+    string_upper
+application_surface_enable
+application_surface_draw_enable
+gamepad_get_device_count
+gamepad_is_connected
+    joystick_exists
+gamepad_axis_value
+sqr
+sqrt
+darctan2
+joystick_xpos
+joystick_ypos
+joystick_direction
+joystick_pov
+keyboard_key_press
+keyboard_key_release
+    keyboard_check_released
+    window_get_fullscreen
+buffer_read
+json_decode
+buffer_delete
+    surface_get_height
+texture_set_interpolation
+draw_surface_ext
+max
+os_is_paused
+audio_pause_all
+instance_deactivate_all
+instance_activate_all
+audio_resume_all
+sprite_replace
+sprite_collision_mask
+draw_ellipse_color
+instance_activate_object
