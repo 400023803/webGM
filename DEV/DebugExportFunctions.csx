@@ -88,7 +88,7 @@ void DumpFunction(string name) {
             byte[] writeData = new UTF8Encoding(true).GetBytes(data);
             file.Write(writeData, 0, writeData.Length);
         } catch (Exception e) {
-            throw new ScriptException($"An error occurred while exporting the function data.\n{e}");
+            throw new ScriptException($"An error occurred while exporting data for function \"{name}\".\n{e}");
         }
     }
 
