@@ -1,12 +1,7 @@
-game ended screen
-    press enter to quit (like builtin game packer)
-
 add tiles
-    need to export data
+    export data
     render in main.js
     also add functions - tile_layer_show(), tile_layer_hide(), tile_layer_shift()
-add paths
-    find out how to load data
 
 auto-find hex colors ($BBGGRR)/(#RRGGBB), replace/define with JS hex color ("#RRGGBB")/("#RRGGBB")
     UNDERTALE COLORS FIX (JS) BELOW
@@ -19,7 +14,7 @@ add on to scope variables
     "self" - current scope (can change within "with" statements)
     "other" - other scope (previous scope in with statement, or other instance in collision event - if neither applies, it's the same as "self")
 
-code between Step and EndStep events (order matters)
+add code between Step and EndStep events (order matters)
     move instances (hspeed, vspeed, <paths>)
     check collison - if 2 things collide and 1 is solid then they both move to their previous frame's position, collision events called for both
 

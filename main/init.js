@@ -2,6 +2,7 @@ let currentGame = null
 let currentGamePack = null
 let isGameWindow = false
 let hasInited = false
+let readyToEnd = false
 async function getDataInit () {
     let packResp = await fetch(`./games/${currentGame}.wpck`)
     let packBuf = await packResp.arrayBuffer()

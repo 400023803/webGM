@@ -87,7 +87,8 @@ function endGame () {
     fireEventsAllInstances("Other", "GameEnd")
     endMainTickLoop()
 
-    drawMainUI("Game ended.")
+    readyToEnd = true
+    drawMainUI("Game ended. Press Enter to quit.")
 }
 function debugEndGame () {
     console.warn("Ending game... (debug)")
