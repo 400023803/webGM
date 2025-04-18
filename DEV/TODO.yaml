@@ -1,9 +1,11 @@
+game ended screen
+    press enter to quit (like builtin game packer)
+
 add tiles
     need to export data
     render in main.js
     also add functions - tile_layer_show(), tile_layer_hide(), tile_layer_shift()
 add paths
-    need to export data
     find out how to load data
 
 auto-find hex colors ($BBGGRR)/(#RRGGBB), replace/define with JS hex color ("#RRGGBB")/("#RRGGBB")

@@ -317,6 +317,8 @@ function getObjects () {
             }
         }
     }
+
+    getKeys()
 }
 
 let vkKeys = {}

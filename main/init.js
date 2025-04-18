@@ -11,13 +11,12 @@ async function getDataInit () {
     getInfo()
     if (isGameWindow) {
         getScripts()
-        getSprites()
         getFonts()
-        getMusic()
-        getSounds()
         getObjects()
+        getPaths()
         getRooms()
-        getKeys()
+        getSounds()
+        getSprites()
     }
 
     if (isGameWindow) {
