@@ -85,8 +85,8 @@ void DumpRoom(string name, uint width, uint height, uint speed, string backgroun
     using (var dataFile = new FileStream(exportedRoomsFolder + System.IO.Path.DirectorySeparatorChar + name + ".csv", FileMode.Create)) {
         try {
             foreach (var obj in objects) {
-                int x = obj.X;
-                int y = obj.Y;
+                string x = obj.X.ToString();
+                string y = obj.Y.ToString();
 
                 UndertaleGameObject gameObj = obj.ObjectDefinition;
                 string objName = gameObj.Name.Content;
