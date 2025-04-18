@@ -2,7 +2,7 @@ function getMusic () {
     let folder = fetchData(`sounds/music`, "dir")
 
     for (let item of Object.keys(folder)) {
-        let musName = item.substring(0, item.lastIndexOf(".ogg"))
+        let musName = item.substring(0, item.lastIndexOf("."))
         window[musName] = `sounds/music_${item}`
     }
 }
@@ -12,7 +12,7 @@ function getSounds () {
     for (let item of Object.keys(folder)) {
         if (item == "music") continue
 
-        let musName = item.substring(0, item.lastIndexOf(".wav"))
+        let musName = item.substring(0, item.lastIndexOf("."))
         window[musName] = `sounds_${item}`
     }
 }
