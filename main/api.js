@@ -202,10 +202,11 @@ Object.defineProperty(window, "view_yview", {
 function room_goto (name) {
     if (room != null) fireEventsAllInstances("Other", "RoomEnd")
     if (typeof name == "number") room = name
-    else room = roomList.indexOf(name)
+    else if (typeof name == "string") room = Object.keys(roomList).indexOf(name)
+    else throw new Error(`Error going to room "${name}" - Invalid data type "${typeof name}"`)
     
     let copiedInstances = all?.filter(val => val?.persistent) || []
-    all = loadRoomInstances(room)
+    all = loadRoomInstances()
     if (gameStartEventFired) all.push(...copiedInstances)
 
     for (let j = 0; j < all.length; j++) {

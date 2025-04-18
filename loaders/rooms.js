@@ -1,4 +1,4 @@
-let roomList = []
+let roomList = {}
 function getRooms () {
     let infoText = fetchData(`rooms/ALL_ROOMS_INFO_MAIN.csv`, "txt")
     let lines = infoText.split("\n")
@@ -10,18 +10,19 @@ function getRooms () {
         if (width == "") width = canvasEl.width
         if (height == "") height = canvasEl.height
         width = +width, height = +height, speed = +speed
-        room_width = width, room_height = height, room_speed = speed
-        roomBackground = background
 
-        roomList.push(nameId)
+        roomList[nameId] = {width, height, speed, background}
         window[nameId] = nameId
     }
 }
 
-function loadRoomInstances (room) {
-    let instances = []
+function loadRoomInstances () {
+    let {width, height, speed, background} = Object.values(roomList)[room]
+    room_width = width, room_height = height, room_speed = speed
+    roomBackground = background
 
-    let roomName = roomList[room]
+    let instances = []
+    let roomName = Object.keys(roomList)[room]
     let dataText = fetchData(`rooms/${roomName}.csv`, "txt")
     for (let line of dataText.split("\n")) {
         if (line == "") continue
