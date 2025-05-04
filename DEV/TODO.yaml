@@ -1,3 +1,5 @@
+fix introlast sprite?
+
 add tiles
     export data
     render in main.js
@@ -20,4 +22,4 @@ add code between Step and EndStep events (order matters)
 
 sounds stop working sometimes (temporarily)
     maybe a website security restriction? hopefully not
-    fix at some point of possible
+    fix at some point if possible
