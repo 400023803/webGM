@@ -1,8 +1,10 @@
 fix introlast sprite?
 
-add tiles
+finish tiles
     render in main.js
     also add functions - tile_layer_show(), tile_layer_hide(), tile_layer_shift()
+
+allow importing/exporting fileSystem variable to computer
 
 auto-find hex colors ($BBGGRR)/(#RRGGBB), replace/define with JS hex color ("#RRGGBB")/("#RRGGBB")
     UNDERTALE COLORS FIX (JS) BELOW
