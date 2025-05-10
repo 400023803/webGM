@@ -1,7 +1,6 @@
 fix introlast sprite?
 
 add tiles
-    export data
     render in main.js
     also add functions - tile_layer_show(), tile_layer_hide(), tile_layer_shift()
 
