@@ -17,7 +17,7 @@ They are re-packed into a custom `.wpck` file format I made - it just stores a f
 
 ### How to add games:
 1. Buy the game.
-    - webGM is intended for PC games on Steam. It probably works elsewhere, but that hasn't been tested.
+    - webGM is intended for PC games on Steam. It might work elsewhere, but that hasn't been tested.
 2. In the `/games/dumps` folder, create a new folder with the name of the game.
     - Inside this folder, create the folders `fonts`, `info`, `objects`, `paths`, `rooms`, `scripts`, `sounds`, and `sprites`.
     - Also create the folder `music` inside the `sounds` folder.
