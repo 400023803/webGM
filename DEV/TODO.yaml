@@ -1,9 +1,11 @@
 fix titlescreen freezing when "begin game" clicked
     game uses while loop for inputs, freezes JS
-fix introlast sprite?
+fix introlast sprite - ?
 
 finish tiles/backgrounds
     import tiles and backgrounds from tiles folder
+    import data from rooms about which backgrounds and tiles they use (if any)
+
     render tiles in main.js
     also add functions - tile_layer_show(), tile_layer_hide(), tile_layer_shift()
     also add functions - draw_background(), etc.
