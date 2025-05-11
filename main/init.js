@@ -9,6 +9,7 @@ async function getDataInit () {
     packBuf = new FileBuf(packBuf)
     currentGamePack = unpackWPCK(packBuf)
     
+    loadFileSystemFromLocalStorage()
     getInfo()
     if (isGameWindow) {
         getScripts()

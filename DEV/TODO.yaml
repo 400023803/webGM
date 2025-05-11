@@ -1,10 +1,12 @@
+fix titlescreen freezing when "begin game" clicked
+    game uses while loop for inputs, freezes JS
 fix introlast sprite?
 
 finish tiles
     render in main.js
     also add functions - tile_layer_show(), tile_layer_hide(), tile_layer_shift()
 
-allow importing/exporting fileSystem variable to computer
+allow importing/exporting filesystem to computer (fileSystem and fileSystemStr variables, stored as actual file/directory structure)
 
 auto-find hex colors ($BBGGRR)/(#RRGGBB), replace/define with JS hex color ("#RRGGBB")/("#RRGGBB")
     UNDERTALE COLORS FIX (JS) BELOW

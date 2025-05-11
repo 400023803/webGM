@@ -9,17 +9,29 @@ function closeIni () {
             let val = fileSystem[currentlyOpenIni][section][key]
             file += `${key} = "${val}"\n`
         }
-        file += "\n"
     }
 
+    fileSystemStr[currentlyOpenIni] = file
     currentlyOpenIni = null
+    saveFileSystemToLocalStorage()
     return file
 }
 function writeIni (section, key, val) {
     if (fileSystem[currentlyOpenIni] == undefined) fileSystem[currentlyOpenIni] = {}
     if (fileSystem[currentlyOpenIni][section] == undefined) fileSystem[currentlyOpenIni][section] = {}
     fileSystem[currentlyOpenIni][section][key] = val
+    saveFileSystemToLocalStorage()
 }
+
+function saveFileSystemToLocalStorage () {
+    localStorage.setItem("fileSystem", JSON.stringify(fileSystem))
+    localStorage.setItem("fileSystemStr", JSON.stringify(fileSystemStr))
+}
+function loadFileSystemFromLocalStorage () {
+    fileSystem = JSON.parse(localStorage.getItem("fileSystem")) || {}
+    fileSystemStr = JSON.parse(localStorage.getItem("fileSystemStr")) || {}
+}
+
 function checkKeyPressed (key) {
     let val = pressedKeys.indexOf(key)
     if (val > -1) pressedKeys.splice(val, 1)
@@ -103,6 +115,7 @@ function restartGame() {
 
 let roomBackground = null
 let fileSystem = {}
+let fileSystemStr = {}
 let joysticksList = []
 let textAlignH = 0
 let runContextCopy = window
