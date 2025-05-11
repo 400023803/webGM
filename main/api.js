@@ -23,13 +23,14 @@ function writeIni (section, key, val) {
     saveFileSystemToLocalStorage()
 }
 
-function saveFileSystemToLocalStorage () {
-    localStorage.setItem("fileSystem", JSON.stringify(fileSystem))
-    localStorage.setItem("fileSystemStr", JSON.stringify(fileSystemStr))
+function saveFileSystemToLocalStorage (gameOverride = null) {
+    let storage = {fileSystem, fileSystemStr}
+    localStorage.setItem(gameOverride || currentGame || "", JSON.stringify(storage))
 }
-function loadFileSystemFromLocalStorage () {
-    fileSystem = JSON.parse(localStorage.getItem("fileSystem")) || {}
-    fileSystemStr = JSON.parse(localStorage.getItem("fileSystemStr")) || {}
+function loadFileSystemFromLocalStorage (gameOverride = null) {
+    let storage = JSON.parse(localStorage.getItem(gameOverride || currentGame || "")) || {}
+    fileSystem = storage?.fileSystem || {}
+    fileSystemStr = storage?.fileSystemStr || {}
 }
 
 function checkKeyPressed (key) {
