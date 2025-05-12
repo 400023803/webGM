@@ -19,6 +19,7 @@ async function getDataInit () {
         getRooms()
         getSounds()
         getSprites()
+        getTiles()
     }
 
     if (isGameWindow) {

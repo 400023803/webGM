@@ -3,7 +3,6 @@ fix titlescreen freezing when "begin game" clicked
 fix introlast sprite - ?
 
 finish tiles/backgrounds
-    import tiles and backgrounds from tiles folder
     import data from rooms about which backgrounds and tiles they use (if any)
 
     render tiles in main.js
