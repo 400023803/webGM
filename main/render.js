@@ -118,3 +118,12 @@ function resizeRenderer () {
     }
 }
 onresize = resizeRenderer
+
+function drawRawRectangle (x1, y1, x2, y2, isOnlyOutline = false) {
+    drawCtx[isOnlyOutline ? "strokeRect" : "fillRect"](drawScreenX + (x1 * drawScaleX), drawScreenY + (y1 * drawScaleY), (x2 - x1) * drawScaleX, (y2 - y1) * drawScaleY)
+}
+function drawRawCircle (x, y, r, isOnlyOutline = false) {
+    drawCtx.beginPath()
+    drawCtx.arc(drawScreenX + (x * drawScaleX), drawScreenY + (y * drawScaleY), r * drawScaleX, 0, Math.PI * 2)
+    drawCtx[isOnlyOutline ? "stroke" : "fill"]()
+}

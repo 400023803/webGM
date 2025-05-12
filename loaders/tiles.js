@@ -16,5 +16,7 @@ function loadBackground (name) {
 }
 function drawBackground (bg, x, y) {
     if (loadedBackgrounds[bg] == undefined) loadBackground(bg)
-    drawCtx.drawImage(loadedBackgrounds[bg], x, y)
+
+    let img = loadedBackgrounds[bg]
+    drawCtx.drawImage(img, drawScreenX + (x * drawScaleX), drawScreenY + (y * drawScaleY), img.width * drawScaleX, img.height * drawScaleY)
 }

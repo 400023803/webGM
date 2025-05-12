@@ -34,3 +34,8 @@ function loadRoomInstances () {
 
     return instances
 }
+
+function getRoomName (room) {
+    if (typeof room == "string") return room
+    else if (typeof room == "number") return Object.keys(roomList)[room]
+}

@@ -43,6 +43,11 @@ function checkKeyReleased (key) {
     if (val > -1) releasedKeys.splice(val, 1)
     return val > -1
 }
+function clearKey (key) {
+    if (pressedKeys.indexOf(key) > -1) pressedKeys.splice(pressedKeys.indexOf(key), 1)
+    if (heldKeys.indexOf(key) > -1) heldKeys.splice(heldKeys.indexOf(key), 1)
+    if (releasedKeys.indexOf(key) > -1) releasedKeys.splice(releasedKeys.indexOf(key), 1)
+}
 
 function createInstance (x, y, nameId) {
     if (typeof nameId == "object") nameId = nameId.object_index
@@ -316,14 +321,15 @@ function keyboard_check (key) { return heldKeys.indexOf(key) > -1 }
 function keyboard_check_pressed (key) { return checkKeyPressed(key) }
 function keyboard_check_released (key) { return checkKeyReleased(key) }
 function keyboard_check_direct (key) { return heldKeys.indexOf(key) > -1 }
+function keyboard_clear (key) { clearKey(key) }
 function instance_create (x, y, name) { return createInstance(x, y, name) }
 function audio_play_sound (name, priority, loop) { return playSound(name, priority, loop) }
 function ds_map_find_value (map, key) { return map.get(key) }
 function is_undefined (val) { return val == undefined }
 function audio_sound_pitch (sound, pitch) { setSoundPitch(sound, pitch) }
 function audio_sound_gain (sound, vol, time) { setSoundGain(sound, vol, time) }
-function draw_rectangle (x1, y1, x2, y2, isOnlyOutline) { drawCtx[isOnlyOutline ? "strokeRect" : "fillRect"](drawScreenX + (x1 * drawScaleX), drawScreenY + (y1 * drawScaleY), (x2 - x1) * drawScaleX, (y2 - y1) * drawScaleY) }
-function draw_circle (x, y, r, isOnlyOutline) { drawCtx.beginPath(); drawCtx.arc(drawScreenX + (x * drawScaleX), drawScreenY + (y * drawScaleY), r * drawScaleX, 0, Math.PI * 2); drawCtx[isOnlyOutline ? "stroke" : "fill"]() }
+function draw_rectangle (x1, y1, x2, y2, isOnlyOutline) { drawRawRectangle(x1, y1, x2, y2, isOnlyOutline) }
+function draw_circle (x, y, r, isOnlyOutline) { drawRawCircle(x, y, r, isOnlyOutline) }
 function instance_exists (name) { return checkInstanceExists(name) }
 function audio_stop_sound (sound) { stopSound(sound) }
 function draw_sprite (sprite, frame, x, y) { drawSpriteStatic(sprite, frame, x, y) }
@@ -350,3 +356,5 @@ function string_replace_all (str, substr, newstr) { return str.replaceAll(substr
 function real (str) { return parseInt(str) }
 function draw_sprite_part (sprite, frame, left, top, w, h, x, y) { drawSpriteStaticPart(sprite, frame, left, top, w, h, x, y) }
 function draw_background (bg, x, y) { drawBackground(bg, x, y) }
+function room_get_name (room) { return getRoomName(room) }
+function string (...args) { return formatString(...args) }
