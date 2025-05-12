@@ -32,7 +32,7 @@ draw_sprite_part_ext
 draw_background_part_ext
 make_color_rgb
 draw_enable_alphablend
-draw_background
+    draw_background
 draw_set_alpha
     draw_set_color
     window_get_height

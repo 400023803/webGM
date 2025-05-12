@@ -349,3 +349,4 @@ function draw_sprite_ext (sprite, frame, x, y, scaleX, scaleY, angle, blendColor
 function string_replace_all (str, substr, newstr) { return str.replaceAll(substr, newstr) }
 function real (str) { return parseInt(str) }
 function draw_sprite_part (sprite, frame, left, top, w, h, x, y) { drawSpriteStaticPart(sprite, frame, left, top, w, h, x, y) }
+function draw_background (bg, x, y) { drawBackground(bg, x, y) }

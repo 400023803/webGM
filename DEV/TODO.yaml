@@ -7,7 +7,6 @@ finish tiles/backgrounds
 
     render tiles in main.js
     also add functions - tile_layer_show(), tile_layer_hide(), tile_layer_shift()
-    also add functions - draw_background(), etc.
 
 allow importing/exporting filesystems to computer (fileSystem and fileSystemStr variables, stored as actual file/directory structure, separated for each game)
 
